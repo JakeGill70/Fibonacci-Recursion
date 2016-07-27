@@ -42,7 +42,8 @@ using System.Threading.Tasks;
 namespace FibonacciRecursion {
     class Program {
         static void Main(string[] args) {
-            int TERM = 5;
+            Console.WriteLine("What nth value would you like from the Fibonacci Sequence?");
+            int TERM = int.Parse(Console.ReadLine());
 
             Console.WriteLine(fibSeq(TERM));
             Console.ReadLine();
@@ -54,7 +55,7 @@ namespace FibonacciRecursion {
             if (t == 1)
                 return 1;
             else {
-                return fibSeq(t - 1) + fibSeq(t - 1);
+                return fibSeq(t - 1) + fibSeq(t - 2);
             }
         }
     }
